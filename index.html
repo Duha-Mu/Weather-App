@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class="navbar navbar-expand-lg py-4" data-bs-theme="dark">
+        <div class="container-fluid container-lg w-75 py-4 d-flex justify-content-between align-items-center">
+            <a class='text-decoration-none d-flex justify-content-between align-items-center logo' href='/'>
+                <img src="images/logo@2x.png" alt="" class="me-3">
+                <div class="logo-type  text-white">
+                    <h1 class="site-title">Weather</h1>
+                    <small class="site-description">tagline goes here</small>
+                </div>
+            </a>
+
+
+            <div class="main-navigation" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button type="button" class="menu-toggle btn">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="menu navbar-nav">
+                        <li class="menu-item current-menu-item"><a class="nav-link active" aria-current="page"
+                                href='#'>Home</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">News</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Live cameras</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Photos</a></li>
+                        <li class="menu-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section class="hero">
+        <div class="container w-75 m-auto">
+
+            <div class="find-location">
+                <h2 class="text-white ms-4">Search By Country name..</h2>
+
+                <input id="searchInput" class="search-input text-white" type="search"
+                    placeholder="find your location..." aria-label="Search" />
+                <button class="search-btn" type="submit">Find</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="forecast-table">
+        <div class="container px-lg-5">
+            <div class="row forecast-container gy-0" id="rowData">
+
+                <div class="col-md-4 p-0">
+
+                    <div class="today forecast">
+                        <div class="forecast-header d-flex justify-content-between">
+                            <div id="day" class="day"></div>
+                            <div id="todayDate" class="date"></div>
+                        </div>
+                        <div class="forecast-content">
+                            <div id="locationCity" class="location"></div>
+                            <div class="degree d-flex">
+                                <div id="tempToday" class="num"></div>
+                                <div class="forecast-icon">
+                                    <img src="" id="dayImage" alt="">
+                                </div>
+                            </div>
+                            <div id="condition" class="custom"></div>
+                            <span>
+                                <img src="images/icon-umberella.png" alt="">
+                                <span id="humidityDay"></span>
+                            </span>
+
+                            <span>
+                                <img src="images/icon-wind.png" alt="">
+                                <span id="windSpeed"></span>
+                            </span>
+                            <span>
+                                <img src="images/icon-compass.png" alt="">
+                               <span id="windDirection"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 p-0">
+
+                    <div class="forecast even text-center text-light">
+                        <div class="forecast-header">
+                            <div id="nextDay" class="day"></div>
+                        </div>
+
+                        <div class=" forecast-content text-center">
+                            <div class="forecast-icon">
+                                <img src="" id="tomorrowIco" alt="">
+                            </div>
+
+                            <div class="degree maxTemp"></div>
+
+                            <small class="minTimp"></small>
+
+                            <div class="custom condition"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 p-0">
+
+                    <div class="forecast text-center text-light">
+                        <div class="forecast-header">
+                            <div class="day thirdDay"></div>
+                        </div>
+
+                        <div class=" forecast-content text-center">
+                            <div class="forecast-icon">
+                                <img src="" id="thirdIcon" alt="">
+                            </div>
+
+                            <div class="degree max-temp">
+                                21.4
+                                <sub class="degree-symbol">o</sub>
+                                C
+                            </div>
+
+                            <small class="min-timp">
+                                13.5
+                                <sub class="degree-symbol">o</sub>
+                            </small>
+                            <div class="custom condition3">Sunny</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="subscribe-form position-relative mb-4">
+                        <input type="text" placeholder="Enter your email to subscribe...">
+                        <button class="subscribe-btn" type="submit">Subscribe</button>
+                    </div>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-brands fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-brands fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
